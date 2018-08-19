@@ -1,7 +1,3 @@
-
-//var gameServer = {};
-//var gameClient = {};
-
 function GameServer() {
     this._connections = {};
     this.id = "";
