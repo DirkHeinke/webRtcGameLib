@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+    <title>peerJS server</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
+    <script src="gameLib.js"></script>
+
+    <script>
+    
+    var gs = new GameServer();
+    
+
+
+    gs.handleData = (id, data) => {
+        console.log(id, data);
+
+        gs.send(id, "got it");
+        gs.sendToAll("new data: " + data);
+
+    };
+
+    gs.create("test");
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <center><h1>gameLib server</h1></center>
+    
+</body>
+</html>

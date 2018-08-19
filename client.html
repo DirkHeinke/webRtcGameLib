@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+    <title>gameLib client</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.9/peer.min.js"></script>
+    <script src="gameLib.js"></script>
+
+    <script>
+    
+        let gc = new GameClient();
+
+        gc.connect("test").then((id) => {
+            gc.send("hello");
+        });
+
+        gc.handleData = (data) => {
+            console.log(data);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <center><h1>gameLib client</h1></center>
+    
+</body>
+</html>
